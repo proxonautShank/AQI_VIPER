@@ -194,14 +194,12 @@
 				BF32061F281BB16C00DA47FF /* Socket */,
 				BF32061B281BB00600DA47FF /* Model */,
 				BF320617281BAEE900DA47FF /* Entity */,
-				BF3205C3281BA78600DA47FF /* AppDelegate.swift */,
-				BF3205C5281BA78600DA47FF /* SceneDelegate.swift */,
-				BF320620281BB3D600DA47FF /* View */,
-				BF3205C9281BA78600DA47FF /* Main.storyboard */,
+				BF320637281BCBF300DA47FF /* CityDetails */,
+				BF320621281BB4EF00DA47FF /* CitiesList */,
+				BF320620281BB3D600DA47FF /* Common */,
+				BF497C89281C5A8E00B0122E /* Storyboard */,
 				BF3205CF281BA78800DA47FF /* Assets.xcassets */,
-				BF3205D1281BA78800DA47FF /* LaunchScreen.storyboard */,
 				BF3205D4281BA78800DA47FF /* Info.plist */,
-				BF3205CC281BA78600DA47FF /* AQI_VIPER.xcdatamodeld */,
 			);
 			path = AQI_VIPER;
 			sourceTree = "<group>";
@@ -234,6 +232,7 @@
 		BF32061B281BB00600DA47FF /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				BF3205CC281BA78600DA47FF /* AQI_VIPER.xcdatamodeld */,
 				BF32060A281BAE8C00DA47FF /* AQICityRecord+CoreDataClass.swift */,
 				BF32060B281BAE8C00DA47FF /* AQICityRecord+CoreDataProperties.swift */,
 				BF32060C281BAE8C00DA47FF /* CityModel+CoreDataClass.swift */,
@@ -251,14 +250,14 @@
 			path = Socket;
 			sourceTree = "<group>";
 		};
-		BF320620281BB3D600DA47FF /* View */ = {
+		BF320620281BB3D600DA47FF /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				BF320637281BCBF300DA47FF /* CityDetails */,
+				BF3205C3281BA78600DA47FF /* AppDelegate.swift */,
+				BF3205C5281BA78600DA47FF /* SceneDelegate.swift */,
 				BF320628281BB4EF00DA47FF /* AQIView */,
-				BF320621281BB4EF00DA47FF /* CitiesList */,
 			);
-			path = View;
+			path = Common;
 			sourceTree = "<group>";
 		};
 		BF320621281BB4EF00DA47FF /* CitiesList */ = {
@@ -365,6 +364,15 @@
 				BF32063B281BCBF300DA47FF /* DetailCityAQIController.xib */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		BF497C89281C5A8E00B0122E /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				BF3205C9281BA78600DA47FF /* Main.storyboard */,
+				BF3205D1281BA78800DA47FF /* LaunchScreen.storyboard */,
+			);
+			path = Storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
