@@ -13,7 +13,7 @@ struct AQIModel: Codable
     var aqi : Double
 }
 
-enum AQIStatus {
+enum AQIStatus : Int16 {
     case good, satisfactory, moderate, poor, veryPoor, severe, unknown
     
     static func status(forAQI: Double) -> AQIStatus {
