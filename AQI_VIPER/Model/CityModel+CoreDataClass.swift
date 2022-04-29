@@ -34,6 +34,13 @@ public class CityModel: NSManagedObject {
         return try? CoreDataStack.shared.managedContext.fetch(req).first
     }
     
+    static func getRecords(city: String) -> NSSet? {
+        let req = CityModel.fetchRequest()
+        req.predicate = NSPredicate(format: "name = %@", city)
+        
+        return try? CoreDataStack.shared.managedContext.fetch(req).first?.records
+    }
+    
     static func getModels() -> [CityModel]? {
         let req = CityModel.fetchRequest()
         req.sortDescriptors = [NSSortDescriptor.init(key: "name", ascending: true)]

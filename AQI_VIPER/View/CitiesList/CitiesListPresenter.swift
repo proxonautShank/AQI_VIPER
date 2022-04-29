@@ -24,9 +24,7 @@ protocol AQIPresenter {
 class CitiesListPresenter: AQIPresenter {
     
     var interactor: CitiesListInteractor? {
-        didSet {
-            interactor?.getAQIData()
-        }
+        didSet { interactor?.getAQIData() }
     }
     var router: CitiesListRouter?
     var view: CitiesAQIController?
