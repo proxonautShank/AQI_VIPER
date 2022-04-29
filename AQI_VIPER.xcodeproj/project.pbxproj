@@ -27,6 +27,8 @@
 		BF320615281BAE8C00DA47FF /* CityModel+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF32060D281BAE8C00DA47FF /* CityModel+CoreDataProperties.swift */; };
 		BF320619281BAF6400DA47FF /* AQIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF320618281BAF6400DA47FF /* AQIModel.swift */; };
 		BF32061A281BAF6400DA47FF /* AQIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF320618281BAF6400DA47FF /* AQIModel.swift */; };
+		BF32061D281BB16600DA47FF /* WebSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF32061C281BB16600DA47FF /* WebSocket.swift */; };
+		BF32061E281BB16600DA47FF /* WebSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF32061C281BB16600DA47FF /* WebSocket.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +68,7 @@
 		BF32060C281BAE8C00DA47FF /* CityModel+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CityModel+CoreDataClass.swift"; sourceTree = "<group>"; };
 		BF32060D281BAE8C00DA47FF /* CityModel+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CityModel+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		BF320618281BAF6400DA47FF /* AQIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AQIModel.swift; sourceTree = "<group>"; };
+		BF32061C281BB16600DA47FF /* WebSocket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSocket.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,8 +99,6 @@
 		BF3205B7281BA78600DA47FF = {
 			isa = PBXGroup;
 			children = (
-				BF32061B281BB00600DA47FF /* Model */,
-				BF320617281BAEE900DA47FF /* Entity */,
 				BF3205C2281BA78600DA47FF /* AQI_VIPER */,
 				BF3205DC281BA78800DA47FF /* AQI_VIPERTests */,
 				BF3205E6281BA78800DA47FF /* AQI_VIPERUITests */,
@@ -118,6 +119,9 @@
 		BF3205C2281BA78600DA47FF /* AQI_VIPER */ = {
 			isa = PBXGroup;
 			children = (
+				BF32061F281BB16C00DA47FF /* Socket */,
+				BF32061B281BB00600DA47FF /* Model */,
+				BF320617281BAEE900DA47FF /* Entity */,
 				BF3205C3281BA78600DA47FF /* AppDelegate.swift */,
 				BF3205C5281BA78600DA47FF /* SceneDelegate.swift */,
 				BF3205C7281BA78600DA47FF /* ViewController.swift */,
@@ -164,6 +168,14 @@
 				BF32060D281BAE8C00DA47FF /* CityModel+CoreDataProperties.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		BF32061F281BB16C00DA47FF /* Socket */ = {
+			isa = PBXGroup;
+			children = (
+				BF32061C281BB16600DA47FF /* WebSocket.swift */,
+			);
+			path = Socket;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -306,6 +318,7 @@
 				BF3205CE281BA78600DA47FF /* AQI_VIPER.xcdatamodeld in Sources */,
 				BF3205C6281BA78600DA47FF /* SceneDelegate.swift in Sources */,
 				BF320619281BAF6400DA47FF /* AQIModel.swift in Sources */,
+				BF32061D281BB16600DA47FF /* WebSocket.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,6 +332,7 @@
 				BF320613281BAE8C00DA47FF /* CityModel+CoreDataClass.swift in Sources */,
 				BF32060F281BAE8C00DA47FF /* AQICityRecord+CoreDataClass.swift in Sources */,
 				BF32061A281BAF6400DA47FF /* AQIModel.swift in Sources */,
+				BF32061E281BB16600DA47FF /* WebSocket.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
