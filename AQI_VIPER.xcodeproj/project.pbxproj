@@ -58,6 +58,14 @@
 		BF32065B281BCCDC00DA47FF /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF32064C281BCCDC00DA47FF /* ArrayExtension.swift */; };
 		BF32065C281BCCDC00DA47FF /* DataEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF32064D281BCCDC00DA47FF /* DataEntry.swift */; };
 		BF32065D281BCCDC00DA47FF /* DataEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF32064D281BCCDC00DA47FF /* DataEntry.swift */; };
+		BF320660281BD7CA00DA47FF /* CitiesListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF32065F281BD7CA00DA47FF /* CitiesListPresenter.swift */; };
+		BF320661281BD7CA00DA47FF /* CitiesListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF32065F281BD7CA00DA47FF /* CitiesListPresenter.swift */; };
+		BF320663281BD7EA00DA47FF /* CitiesListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF320662281BD7EA00DA47FF /* CitiesListInteractor.swift */; };
+		BF320664281BD7EA00DA47FF /* CitiesListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF320662281BD7EA00DA47FF /* CitiesListInteractor.swift */; };
+		BF320666281BD80C00DA47FF /* CitiesListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF320665281BD80C00DA47FF /* CitiesListRouter.swift */; };
+		BF320667281BD80C00DA47FF /* CitiesListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF320665281BD80C00DA47FF /* CitiesListRouter.swift */; };
+		BF320669281BFD9D00DA47FF /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF320668281BFD9D00DA47FF /* CoreDataStack.swift */; };
+		BF32066A281BFD9D00DA47FF /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF320668281BFD9D00DA47FF /* CoreDataStack.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -112,6 +120,10 @@
 		BF32064B281BCCDC00DA47FF /* UIBezierPathExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIBezierPathExtension.swift; sourceTree = "<group>"; };
 		BF32064C281BCCDC00DA47FF /* ArrayExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayExtension.swift; sourceTree = "<group>"; };
 		BF32064D281BCCDC00DA47FF /* DataEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataEntry.swift; sourceTree = "<group>"; };
+		BF32065F281BD7CA00DA47FF /* CitiesListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesListPresenter.swift; sourceTree = "<group>"; };
+		BF320662281BD7EA00DA47FF /* CitiesListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesListInteractor.swift; sourceTree = "<group>"; };
+		BF320665281BD80C00DA47FF /* CitiesListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesListRouter.swift; sourceTree = "<group>"; };
+		BF320668281BFD9D00DA47FF /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -210,6 +222,7 @@
 				BF32060B281BAE8C00DA47FF /* AQICityRecord+CoreDataProperties.swift */,
 				BF32060C281BAE8C00DA47FF /* CityModel+CoreDataClass.swift */,
 				BF32060D281BAE8C00DA47FF /* CityModel+CoreDataProperties.swift */,
+				BF320668281BFD9D00DA47FF /* CoreDataStack.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -235,8 +248,10 @@
 		BF320621281BB4EF00DA47FF /* CitiesList */ = {
 			isa = PBXGroup;
 			children = (
-				BF320624281BB4EF00DA47FF /* CityAQICell */,
-				BF320627281BB4EF00DA47FF /* CitiesAQIController.swift */,
+				BF32065E281BD78500DA47FF /* View */,
+				BF32065F281BD7CA00DA47FF /* CitiesListPresenter.swift */,
+				BF320662281BD7EA00DA47FF /* CitiesListInteractor.swift */,
+				BF320665281BD80C00DA47FF /* CitiesListRouter.swift */,
 			);
 			path = CitiesList;
 			sourceTree = "<group>";
@@ -305,6 +320,15 @@
 				BF32064D281BCCDC00DA47FF /* DataEntry.swift */,
 			);
 			path = Shared;
+			sourceTree = "<group>";
+		};
+		BF32065E281BD78500DA47FF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BF320624281BB4EF00DA47FF /* CityAQICell */,
+				BF320627281BB4EF00DA47FF /* CitiesAQIController.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -451,16 +475,20 @@
 				BF32062D281BB4EF00DA47FF /* CityAQICell.swift in Sources */,
 				BF3205C4281BA78600DA47FF /* AppDelegate.swift in Sources */,
 				BF320612281BAE8C00DA47FF /* CityModel+CoreDataClass.swift in Sources */,
+				BF320666281BD80C00DA47FF /* CitiesListRouter.swift in Sources */,
 				BF320652281BCCDC00DA47FF /* BasicBarEntry.swift in Sources */,
 				BF320650281BCCDC00DA47FF /* BasicBarChart.swift in Sources */,
 				BF32065C281BCCDC00DA47FF /* DataEntry.swift in Sources */,
 				BF32063E281BCBF300DA47FF /* DetailCityAQIController.swift in Sources */,
+				BF320663281BD7EA00DA47FF /* CitiesListInteractor.swift in Sources */,
 				BF320658281BCCDC00DA47FF /* UIBezierPathExtension.swift in Sources */,
 				BF32060E281BAE8C00DA47FF /* AQICityRecord+CoreDataClass.swift in Sources */,
+				BF320660281BD7CA00DA47FF /* CitiesListPresenter.swift in Sources */,
 				BF3205CE281BA78600DA47FF /* AQI_VIPER.xcdatamodeld in Sources */,
 				BF320654281BCCDC00DA47FF /* CustomSegments.swift in Sources */,
 				BF3205C6281BA78600DA47FF /* SceneDelegate.swift in Sources */,
 				BF32065A281BCCDC00DA47FF /* ArrayExtension.swift in Sources */,
+				BF320669281BFD9D00DA47FF /* CoreDataStack.swift in Sources */,
 				BF320619281BAF6400DA47FF /* AQIModel.swift in Sources */,
 				BF320656281BCCDC00DA47FF /* CALayerExtension.swift in Sources */,
 				BF32064E281BCCDC00DA47FF /* BasicBarChartPresenter.swift in Sources */,
@@ -473,6 +501,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF320615281BAE8C00DA47FF /* CityModel+CoreDataProperties.swift in Sources */,
+				BF32066A281BFD9D00DA47FF /* CoreDataStack.swift in Sources */,
+				BF320661281BD7CA00DA47FF /* CitiesListPresenter.swift in Sources */,
 				BF32062E281BB4EF00DA47FF /* CityAQICell.swift in Sources */,
 				BF32065D281BCCDC00DA47FF /* DataEntry.swift in Sources */,
 				BF3205DE281BA78800DA47FF /* AQI_VIPERTests.swift in Sources */,
@@ -482,7 +512,9 @@
 				BF320636281BB4EF00DA47FF /* AQIView.swift in Sources */,
 				BF320659281BCCDC00DA47FF /* UIBezierPathExtension.swift in Sources */,
 				BF320632281BB4EF00DA47FF /* CitiesAQIController.swift in Sources */,
+				BF320667281BD80C00DA47FF /* CitiesListRouter.swift in Sources */,
 				BF320655281BCCDC00DA47FF /* CustomSegments.swift in Sources */,
+				BF320664281BD7EA00DA47FF /* CitiesListInteractor.swift in Sources */,
 				BF320651281BCCDC00DA47FF /* BasicBarChart.swift in Sources */,
 				BF320613281BAE8C00DA47FF /* CityModel+CoreDataClass.swift in Sources */,
 				BF32060F281BAE8C00DA47FF /* AQICityRecord+CoreDataClass.swift in Sources */,

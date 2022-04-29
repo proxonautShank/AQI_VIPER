@@ -11,5 +11,15 @@ import CoreData
 
 
 public class AQICityRecord: NSManagedObject {
-
+    
+    static func store(aqiRecord: Double) -> AQICityRecord? {
+        
+        guard let record = NSEntityDescription.insertNewObject(forEntityName: "AQICityRecord", into: CoreDataStack.shared.managedContext) as? AQICityRecord else {return nil}
+        record.aqi = aqiRecord
+        record.aqiString = String(format: "%.2f", aqiRecord)
+        record.time = Date()
+        record.status = AQIStatus.status(forAQI: aqiRecord).rawValue
+        
+        return record
+    }
 }
