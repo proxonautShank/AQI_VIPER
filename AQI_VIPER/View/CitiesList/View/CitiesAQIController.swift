@@ -5,12 +5,25 @@
 //  Created by Shashank Pali on 12/02/22.
 //
 
+/*
+ ViewController
+ protocol
+ reference presenter
+ */
+
 import UIKit
 
 
+protocol AQIViewProtocol {
+    var presenter: CitiesListPresenter? { get set }
+    func update(data: Any)
+    func showErrorMsg(error: Error)
+}
+
 final class CitiesAQIController: UITableViewController, UISearchResultsUpdating {
     
-//    let viewModel = CitiesAQIViewModel()
+    var presenter: CitiesListPresenter?
+    
     var citiesModel = [CityModel]()
     var dataSource = [CityModel]()
     var searchText : String?
@@ -29,7 +42,6 @@ final class CitiesAQIController: UITableViewController, UISearchResultsUpdating 
         
         setupSearch()
         setupTable()
-        setupModel()
     }
     
     private func setupSearch() {
@@ -43,11 +55,6 @@ final class CitiesAQIController: UITableViewController, UISearchResultsUpdating 
         tableView.contentInset = UIEdgeInsets(top: 10, left: 0, bottom: 10, right: 0)
     }
     
-    private func setupModel() {
-//        viewModel.delegate = self
-//        viewModel.requestForData()
-    }
-    
     // MARK: - Table view data source
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -57,15 +64,14 @@ final class CitiesAQIController: UITableViewController, UISearchResultsUpdating 
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 10
-//        return dataSource.count
+        return dataSource.count
     }
     
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "CityAQICell", for: indexPath) as! CityAQICell
-//        cell.prepare(forModel: dataSource[indexPath.row])
+        //        cell.prepare(forModel: dataSource[indexPath.row])
         
         return cell
     }
@@ -74,11 +80,11 @@ final class CitiesAQIController: UITableViewController, UISearchResultsUpdating 
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let detail = DetailCityAQIController(nibName: "DetailCityAQIController", bundle: nil)
-//        detail.cityModel = dataSource[indexPath.row]
+        //        detail.cityModel = dataSource[indexPath.row]
         detail.modalPresentationStyle = .overCurrentContext
         self.navigationController?.present( detail, animated: true, completion: nil)
     }
-
+    
     // MARK: - Search Results Updating
     
     func updateSearchResults(for searchController: UISearchController) {
@@ -91,11 +97,11 @@ final class CitiesAQIController: UITableViewController, UISearchResultsUpdating 
         }
         
     }
-   
+    
     
     private func reloadTable() {
         if let text = searchText {
-//            dataSource = citiesModel.filter{$0.name.contains(text)}
+            dataSource = citiesModel.filter{$0.name!.contains(text)}
         }else {
             dataSource = citiesModel
         }
@@ -104,6 +110,24 @@ final class CitiesAQIController: UITableViewController, UISearchResultsUpdating 
         }
     }
     
+}
+
+extension CitiesAQIController: AQIViewProtocol {
+    
+    func update(data: Any) {
+        guard let model = data as? [CityModel] else { return }
+        citiesModel = model
+        reloadTable()
+    }
+    
+    func showErrorMsg(error: Error) {
+        // should show error
+    }
+    
+    //    func didUpdated(citiesAQI: [CityModel]) {
+    //        citiesModel = citiesAQI
+    //        reloadTable()
+    //    }
 }
 
 //extension CitiesAQIController: CitiesAQIViewModelDelegate {
