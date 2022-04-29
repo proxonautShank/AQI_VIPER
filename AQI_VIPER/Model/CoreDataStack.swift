@@ -14,7 +14,7 @@ class CoreDataStack {
     // MARK: - Core Data stack
     
     static let shared = CoreDataStack()
-
+    
     lazy var persistentContainer: NSPersistentContainer = {
         
         let container = NSPersistentContainer(name: "AQI_VIPER")
@@ -29,15 +29,17 @@ class CoreDataStack {
     var managedContext: NSManagedObjectContext {
         return persistentContainer.viewContext
     }
-
+    
     // MARK: - Core Data Saving support
-
+    
     func saveContext () {
         let context = managedContext
-        if context.hasChanges {
+        context.performAndWait {
             do {
-                try context.save()
-            } catch {
+                if context.hasChanges {
+                    try context.save()
+                }
+            }catch {
                 let nserror = error as NSError
                 fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
             }

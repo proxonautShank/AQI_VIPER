@@ -20,6 +20,8 @@ public class AQICityRecord: NSManagedObject {
         record.time = Date()
         record.status = AQIStatus.status(forAQI: aqiRecord).rawValue
         
+        CoreDataStack.shared.saveContext()
+        
         return record
     }
 }

@@ -24,11 +24,7 @@ public class CityModel: NSManagedObject {
             city?.addToRecords(record)
         }
         
-        do {
-            try context.save()
-        } catch {
-            print("Error saving todo: \(error)")
-        }
+        CoreDataStack.shared.saveContext()
     }
     
     static func getModel(name: String) -> CityModel? {
