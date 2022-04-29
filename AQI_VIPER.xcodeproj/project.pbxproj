@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		BF3205C4281BA78600DA47FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3205C3281BA78600DA47FF /* AppDelegate.swift */; };
 		BF3205C6281BA78600DA47FF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3205C5281BA78600DA47FF /* SceneDelegate.swift */; };
-		BF3205C8281BA78600DA47FF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3205C7281BA78600DA47FF /* ViewController.swift */; };
 		BF3205CB281BA78600DA47FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF3205C9281BA78600DA47FF /* Main.storyboard */; };
 		BF3205CE281BA78600DA47FF /* AQI_VIPER.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BF3205CC281BA78600DA47FF /* AQI_VIPER.xcdatamodeld */; };
 		BF3205D0281BA78800DA47FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF3205CF281BA78800DA47FF /* Assets.xcassets */; };
@@ -29,6 +28,36 @@
 		BF32061A281BAF6400DA47FF /* AQIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF320618281BAF6400DA47FF /* AQIModel.swift */; };
 		BF32061D281BB16600DA47FF /* WebSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF32061C281BB16600DA47FF /* WebSocket.swift */; };
 		BF32061E281BB16600DA47FF /* WebSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF32061C281BB16600DA47FF /* WebSocket.swift */; };
+		BF32062D281BB4EF00DA47FF /* CityAQICell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF320625281BB4EF00DA47FF /* CityAQICell.swift */; };
+		BF32062E281BB4EF00DA47FF /* CityAQICell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF320625281BB4EF00DA47FF /* CityAQICell.swift */; };
+		BF32062F281BB4EF00DA47FF /* CityAQICell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF320626281BB4EF00DA47FF /* CityAQICell.xib */; };
+		BF320630281BB4EF00DA47FF /* CityAQICell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF320626281BB4EF00DA47FF /* CityAQICell.xib */; };
+		BF320631281BB4EF00DA47FF /* CitiesAQIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF320627281BB4EF00DA47FF /* CitiesAQIController.swift */; };
+		BF320632281BB4EF00DA47FF /* CitiesAQIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF320627281BB4EF00DA47FF /* CitiesAQIController.swift */; };
+		BF320633281BB4EF00DA47FF /* AQIView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF320629281BB4EF00DA47FF /* AQIView.xib */; };
+		BF320634281BB4EF00DA47FF /* AQIView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF320629281BB4EF00DA47FF /* AQIView.xib */; };
+		BF320635281BB4EF00DA47FF /* AQIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF32062A281BB4EF00DA47FF /* AQIView.swift */; };
+		BF320636281BB4EF00DA47FF /* AQIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF32062A281BB4EF00DA47FF /* AQIView.swift */; };
+		BF32063E281BCBF300DA47FF /* DetailCityAQIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF32063A281BCBF300DA47FF /* DetailCityAQIController.swift */; };
+		BF32063F281BCBF300DA47FF /* DetailCityAQIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF32063A281BCBF300DA47FF /* DetailCityAQIController.swift */; };
+		BF320640281BCBF300DA47FF /* DetailCityAQIController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF32063B281BCBF300DA47FF /* DetailCityAQIController.xib */; };
+		BF320641281BCBF300DA47FF /* DetailCityAQIController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF32063B281BCBF300DA47FF /* DetailCityAQIController.xib */; };
+		BF32064E281BCCDC00DA47FF /* BasicBarChartPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF320645281BCCDC00DA47FF /* BasicBarChartPresenter.swift */; };
+		BF32064F281BCCDC00DA47FF /* BasicBarChartPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF320645281BCCDC00DA47FF /* BasicBarChartPresenter.swift */; };
+		BF320650281BCCDC00DA47FF /* BasicBarChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF320646281BCCDC00DA47FF /* BasicBarChart.swift */; };
+		BF320651281BCCDC00DA47FF /* BasicBarChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF320646281BCCDC00DA47FF /* BasicBarChart.swift */; };
+		BF320652281BCCDC00DA47FF /* BasicBarEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF320647281BCCDC00DA47FF /* BasicBarEntry.swift */; };
+		BF320653281BCCDC00DA47FF /* BasicBarEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF320647281BCCDC00DA47FF /* BasicBarEntry.swift */; };
+		BF320654281BCCDC00DA47FF /* CustomSegments.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF320649281BCCDC00DA47FF /* CustomSegments.swift */; };
+		BF320655281BCCDC00DA47FF /* CustomSegments.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF320649281BCCDC00DA47FF /* CustomSegments.swift */; };
+		BF320656281BCCDC00DA47FF /* CALayerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF32064A281BCCDC00DA47FF /* CALayerExtension.swift */; };
+		BF320657281BCCDC00DA47FF /* CALayerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF32064A281BCCDC00DA47FF /* CALayerExtension.swift */; };
+		BF320658281BCCDC00DA47FF /* UIBezierPathExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF32064B281BCCDC00DA47FF /* UIBezierPathExtension.swift */; };
+		BF320659281BCCDC00DA47FF /* UIBezierPathExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF32064B281BCCDC00DA47FF /* UIBezierPathExtension.swift */; };
+		BF32065A281BCCDC00DA47FF /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF32064C281BCCDC00DA47FF /* ArrayExtension.swift */; };
+		BF32065B281BCCDC00DA47FF /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF32064C281BCCDC00DA47FF /* ArrayExtension.swift */; };
+		BF32065C281BCCDC00DA47FF /* DataEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF32064D281BCCDC00DA47FF /* DataEntry.swift */; };
+		BF32065D281BCCDC00DA47FF /* DataEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF32064D281BCCDC00DA47FF /* DataEntry.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,7 +81,6 @@
 		BF3205C0281BA78600DA47FF /* AQI_VIPER.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AQI_VIPER.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF3205C3281BA78600DA47FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BF3205C5281BA78600DA47FF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		BF3205C7281BA78600DA47FF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		BF3205CA281BA78600DA47FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BF3205CD281BA78600DA47FF /* AQI_VIPER.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AQI_VIPER.xcdatamodel; sourceTree = "<group>"; };
 		BF3205CF281BA78800DA47FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -69,6 +97,21 @@
 		BF32060D281BAE8C00DA47FF /* CityModel+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CityModel+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		BF320618281BAF6400DA47FF /* AQIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AQIModel.swift; sourceTree = "<group>"; };
 		BF32061C281BB16600DA47FF /* WebSocket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSocket.swift; sourceTree = "<group>"; };
+		BF320625281BB4EF00DA47FF /* CityAQICell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityAQICell.swift; sourceTree = "<group>"; };
+		BF320626281BB4EF00DA47FF /* CityAQICell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CityAQICell.xib; sourceTree = "<group>"; };
+		BF320627281BB4EF00DA47FF /* CitiesAQIController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CitiesAQIController.swift; sourceTree = "<group>"; };
+		BF320629281BB4EF00DA47FF /* AQIView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AQIView.xib; sourceTree = "<group>"; };
+		BF32062A281BB4EF00DA47FF /* AQIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AQIView.swift; sourceTree = "<group>"; };
+		BF32063A281BCBF300DA47FF /* DetailCityAQIController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailCityAQIController.swift; sourceTree = "<group>"; };
+		BF32063B281BCBF300DA47FF /* DetailCityAQIController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailCityAQIController.xib; sourceTree = "<group>"; };
+		BF320645281BCCDC00DA47FF /* BasicBarChartPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicBarChartPresenter.swift; sourceTree = "<group>"; };
+		BF320646281BCCDC00DA47FF /* BasicBarChart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicBarChart.swift; sourceTree = "<group>"; };
+		BF320647281BCCDC00DA47FF /* BasicBarEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicBarEntry.swift; sourceTree = "<group>"; };
+		BF320649281BCCDC00DA47FF /* CustomSegments.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSegments.swift; sourceTree = "<group>"; };
+		BF32064A281BCCDC00DA47FF /* CALayerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CALayerExtension.swift; sourceTree = "<group>"; };
+		BF32064B281BCCDC00DA47FF /* UIBezierPathExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIBezierPathExtension.swift; sourceTree = "<group>"; };
+		BF32064C281BCCDC00DA47FF /* ArrayExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayExtension.swift; sourceTree = "<group>"; };
+		BF32064D281BCCDC00DA47FF /* DataEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataEntry.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,12 +162,13 @@
 		BF3205C2281BA78600DA47FF /* AQI_VIPER */ = {
 			isa = PBXGroup;
 			children = (
+				BF320642281BCCDC00DA47FF /* ThirdParty */,
 				BF32061F281BB16C00DA47FF /* Socket */,
 				BF32061B281BB00600DA47FF /* Model */,
 				BF320617281BAEE900DA47FF /* Entity */,
 				BF3205C3281BA78600DA47FF /* AppDelegate.swift */,
 				BF3205C5281BA78600DA47FF /* SceneDelegate.swift */,
-				BF3205C7281BA78600DA47FF /* ViewController.swift */,
+				BF320620281BB3D600DA47FF /* View */,
 				BF3205C9281BA78600DA47FF /* Main.storyboard */,
 				BF3205CF281BA78800DA47FF /* Assets.xcassets */,
 				BF3205D1281BA78800DA47FF /* LaunchScreen.storyboard */,
@@ -176,6 +220,91 @@
 				BF32061C281BB16600DA47FF /* WebSocket.swift */,
 			);
 			path = Socket;
+			sourceTree = "<group>";
+		};
+		BF320620281BB3D600DA47FF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BF320637281BCBF300DA47FF /* CityDetails */,
+				BF320628281BB4EF00DA47FF /* AQIView */,
+				BF320621281BB4EF00DA47FF /* CitiesList */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BF320621281BB4EF00DA47FF /* CitiesList */ = {
+			isa = PBXGroup;
+			children = (
+				BF320624281BB4EF00DA47FF /* CityAQICell */,
+				BF320627281BB4EF00DA47FF /* CitiesAQIController.swift */,
+			);
+			path = CitiesList;
+			sourceTree = "<group>";
+		};
+		BF320624281BB4EF00DA47FF /* CityAQICell */ = {
+			isa = PBXGroup;
+			children = (
+				BF320625281BB4EF00DA47FF /* CityAQICell.swift */,
+				BF320626281BB4EF00DA47FF /* CityAQICell.xib */,
+			);
+			path = CityAQICell;
+			sourceTree = "<group>";
+		};
+		BF320628281BB4EF00DA47FF /* AQIView */ = {
+			isa = PBXGroup;
+			children = (
+				BF320629281BB4EF00DA47FF /* AQIView.xib */,
+				BF32062A281BB4EF00DA47FF /* AQIView.swift */,
+			);
+			path = AQIView;
+			sourceTree = "<group>";
+		};
+		BF320637281BCBF300DA47FF /* CityDetails */ = {
+			isa = PBXGroup;
+			children = (
+				BF32063A281BCBF300DA47FF /* DetailCityAQIController.swift */,
+				BF32063B281BCBF300DA47FF /* DetailCityAQIController.xib */,
+			);
+			path = CityDetails;
+			sourceTree = "<group>";
+		};
+		BF320642281BCCDC00DA47FF /* ThirdParty */ = {
+			isa = PBXGroup;
+			children = (
+				BF320643281BCCDC00DA47FF /* BarChart */,
+			);
+			path = ThirdParty;
+			sourceTree = "<group>";
+		};
+		BF320643281BCCDC00DA47FF /* BarChart */ = {
+			isa = PBXGroup;
+			children = (
+				BF320644281BCCDC00DA47FF /* BasicBarChart */,
+				BF320648281BCCDC00DA47FF /* Shared */,
+			);
+			path = BarChart;
+			sourceTree = "<group>";
+		};
+		BF320644281BCCDC00DA47FF /* BasicBarChart */ = {
+			isa = PBXGroup;
+			children = (
+				BF320645281BCCDC00DA47FF /* BasicBarChartPresenter.swift */,
+				BF320646281BCCDC00DA47FF /* BasicBarChart.swift */,
+				BF320647281BCCDC00DA47FF /* BasicBarEntry.swift */,
+			);
+			path = BasicBarChart;
+			sourceTree = "<group>";
+		};
+		BF320648281BCCDC00DA47FF /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				BF320649281BCCDC00DA47FF /* CustomSegments.swift */,
+				BF32064A281BCCDC00DA47FF /* CALayerExtension.swift */,
+				BF32064B281BCCDC00DA47FF /* UIBezierPathExtension.swift */,
+				BF32064C281BCCDC00DA47FF /* ArrayExtension.swift */,
+				BF32064D281BCCDC00DA47FF /* DataEntry.swift */,
+			);
+			path = Shared;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -282,9 +411,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF32062F281BB4EF00DA47FF /* CityAQICell.xib in Resources */,
 				BF3205D3281BA78800DA47FF /* LaunchScreen.storyboard in Resources */,
 				BF3205D0281BA78800DA47FF /* Assets.xcassets in Resources */,
+				BF320633281BB4EF00DA47FF /* AQIView.xib in Resources */,
 				BF3205CB281BA78600DA47FF /* Main.storyboard in Resources */,
+				BF320640281BCBF300DA47FF /* DetailCityAQIController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,6 +424,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF320634281BB4EF00DA47FF /* AQIView.xib in Resources */,
+				BF320630281BB4EF00DA47FF /* CityAQICell.xib in Resources */,
+				BF320641281BCBF300DA47FF /* DetailCityAQIController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -309,15 +444,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BF3205C8281BA78600DA47FF /* ViewController.swift in Sources */,
 				BF320610281BAE8C00DA47FF /* AQICityRecord+CoreDataProperties.swift in Sources */,
+				BF320635281BB4EF00DA47FF /* AQIView.swift in Sources */,
 				BF320614281BAE8C00DA47FF /* CityModel+CoreDataProperties.swift in Sources */,
+				BF320631281BB4EF00DA47FF /* CitiesAQIController.swift in Sources */,
+				BF32062D281BB4EF00DA47FF /* CityAQICell.swift in Sources */,
 				BF3205C4281BA78600DA47FF /* AppDelegate.swift in Sources */,
 				BF320612281BAE8C00DA47FF /* CityModel+CoreDataClass.swift in Sources */,
+				BF320652281BCCDC00DA47FF /* BasicBarEntry.swift in Sources */,
+				BF320650281BCCDC00DA47FF /* BasicBarChart.swift in Sources */,
+				BF32065C281BCCDC00DA47FF /* DataEntry.swift in Sources */,
+				BF32063E281BCBF300DA47FF /* DetailCityAQIController.swift in Sources */,
+				BF320658281BCCDC00DA47FF /* UIBezierPathExtension.swift in Sources */,
 				BF32060E281BAE8C00DA47FF /* AQICityRecord+CoreDataClass.swift in Sources */,
 				BF3205CE281BA78600DA47FF /* AQI_VIPER.xcdatamodeld in Sources */,
+				BF320654281BCCDC00DA47FF /* CustomSegments.swift in Sources */,
 				BF3205C6281BA78600DA47FF /* SceneDelegate.swift in Sources */,
+				BF32065A281BCCDC00DA47FF /* ArrayExtension.swift in Sources */,
 				BF320619281BAF6400DA47FF /* AQIModel.swift in Sources */,
+				BF320656281BCCDC00DA47FF /* CALayerExtension.swift in Sources */,
+				BF32064E281BCCDC00DA47FF /* BasicBarChartPresenter.swift in Sources */,
 				BF32061D281BB16600DA47FF /* WebSocket.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -327,12 +473,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF320615281BAE8C00DA47FF /* CityModel+CoreDataProperties.swift in Sources */,
+				BF32062E281BB4EF00DA47FF /* CityAQICell.swift in Sources */,
+				BF32065D281BCCDC00DA47FF /* DataEntry.swift in Sources */,
 				BF3205DE281BA78800DA47FF /* AQI_VIPERTests.swift in Sources */,
+				BF32065B281BCCDC00DA47FF /* ArrayExtension.swift in Sources */,
+				BF320653281BCCDC00DA47FF /* BasicBarEntry.swift in Sources */,
 				BF320611281BAE8C00DA47FF /* AQICityRecord+CoreDataProperties.swift in Sources */,
+				BF320636281BB4EF00DA47FF /* AQIView.swift in Sources */,
+				BF320659281BCCDC00DA47FF /* UIBezierPathExtension.swift in Sources */,
+				BF320632281BB4EF00DA47FF /* CitiesAQIController.swift in Sources */,
+				BF320655281BCCDC00DA47FF /* CustomSegments.swift in Sources */,
+				BF320651281BCCDC00DA47FF /* BasicBarChart.swift in Sources */,
 				BF320613281BAE8C00DA47FF /* CityModel+CoreDataClass.swift in Sources */,
 				BF32060F281BAE8C00DA47FF /* AQICityRecord+CoreDataClass.swift in Sources */,
+				BF32064F281BCCDC00DA47FF /* BasicBarChartPresenter.swift in Sources */,
 				BF32061A281BAF6400DA47FF /* AQIModel.swift in Sources */,
 				BF32061E281BB16600DA47FF /* WebSocket.swift in Sources */,
+				BF32063F281BCBF300DA47FF /* DetailCityAQIController.swift in Sources */,
+				BF320657281BCCDC00DA47FF /* CALayerExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
