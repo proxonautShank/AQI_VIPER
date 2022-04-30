@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct AQIModel: Codable
+struct AQIEntity: Codable
 {
     var city : String
     var aqi : Double

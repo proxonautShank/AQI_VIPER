@@ -24,8 +24,8 @@
 		BF320613281BAE8C00DA47FF /* CityModel+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF32060C281BAE8C00DA47FF /* CityModel+CoreDataClass.swift */; };
 		BF320614281BAE8C00DA47FF /* CityModel+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF32060D281BAE8C00DA47FF /* CityModel+CoreDataProperties.swift */; };
 		BF320615281BAE8C00DA47FF /* CityModel+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF32060D281BAE8C00DA47FF /* CityModel+CoreDataProperties.swift */; };
-		BF320619281BAF6400DA47FF /* AQIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF320618281BAF6400DA47FF /* AQIModel.swift */; };
-		BF32061A281BAF6400DA47FF /* AQIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF320618281BAF6400DA47FF /* AQIModel.swift */; };
+		BF320619281BAF6400DA47FF /* AQIEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF320618281BAF6400DA47FF /* AQIEntity.swift */; };
+		BF32061A281BAF6400DA47FF /* AQIEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF320618281BAF6400DA47FF /* AQIEntity.swift */; };
 		BF32061D281BB16600DA47FF /* WebSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF32061C281BB16600DA47FF /* WebSocket.swift */; };
 		BF32061E281BB16600DA47FF /* WebSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF32061C281BB16600DA47FF /* WebSocket.swift */; };
 		BF32062D281BB4EF00DA47FF /* CityAQICell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF320625281BB4EF00DA47FF /* CityAQICell.swift */; };
@@ -113,7 +113,7 @@
 		BF32060B281BAE8C00DA47FF /* AQICityRecord+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AQICityRecord+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		BF32060C281BAE8C00DA47FF /* CityModel+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CityModel+CoreDataClass.swift"; sourceTree = "<group>"; };
 		BF32060D281BAE8C00DA47FF /* CityModel+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CityModel+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		BF320618281BAF6400DA47FF /* AQIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AQIModel.swift; sourceTree = "<group>"; };
+		BF320618281BAF6400DA47FF /* AQIEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AQIEntity.swift; sourceTree = "<group>"; };
 		BF32061C281BB16600DA47FF /* WebSocket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSocket.swift; sourceTree = "<group>"; };
 		BF320625281BB4EF00DA47FF /* CityAQICell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityAQICell.swift; sourceTree = "<group>"; };
 		BF320626281BB4EF00DA47FF /* CityAQICell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CityAQICell.xib; sourceTree = "<group>"; };
@@ -224,7 +224,7 @@
 		BF320617281BAEE900DA47FF /* Entity */ = {
 			isa = PBXGroup;
 			children = (
-				BF320618281BAF6400DA47FF /* AQIModel.swift */,
+				BF320618281BAF6400DA47FF /* AQIEntity.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -537,7 +537,7 @@
 				BF32065A281BCCDC00DA47FF /* ArrayExtension.swift in Sources */,
 				BF497C85281C4CE300B0122E /* DetailCityIneractor.swift in Sources */,
 				BF320669281BFD9D00DA47FF /* CoreDataStack.swift in Sources */,
-				BF320619281BAF6400DA47FF /* AQIModel.swift in Sources */,
+				BF320619281BAF6400DA47FF /* AQIEntity.swift in Sources */,
 				BF320656281BCCDC00DA47FF /* CALayerExtension.swift in Sources */,
 				BF497C79281C1FFF00B0122E /* UIColor+Extension.swift in Sources */,
 				BF32064E281BCCDC00DA47FF /* BasicBarChartPresenter.swift in Sources */,
@@ -572,7 +572,7 @@
 				BF320613281BAE8C00DA47FF /* CityModel+CoreDataClass.swift in Sources */,
 				BF32060F281BAE8C00DA47FF /* AQICityRecord+CoreDataClass.swift in Sources */,
 				BF32064F281BCCDC00DA47FF /* BasicBarChartPresenter.swift in Sources */,
-				BF32061A281BAF6400DA47FF /* AQIModel.swift in Sources */,
+				BF32061A281BAF6400DA47FF /* AQIEntity.swift in Sources */,
 				BF32061E281BB16600DA47FF /* WebSocket.swift in Sources */,
 				BF32063F281BCBF300DA47FF /* DetailCityAQIController.swift in Sources */,
 				BF320657281BCCDC00DA47FF /* CALayerExtension.swift in Sources */,

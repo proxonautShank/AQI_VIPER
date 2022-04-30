@@ -44,7 +44,7 @@ extension CitiesListInteractor: WebSocketDelegate {
     func didReceive(response: String) {
         guard let data = response.data(using: .utf8) else { return }
         do {
-            let responseArray = try JSONDecoder().decode([AQIModel].self, from: data)
+            let responseArray = try JSONDecoder().decode([AQIEntity].self, from: data)
             prepareCitiesAQI(responseArray)
         } catch {
             presenter?.interactorDidfetchedData(with: .failure(error))
@@ -54,7 +54,7 @@ extension CitiesListInteractor: WebSocketDelegate {
 
 extension CitiesListInteractor {
     
-    private func prepareCitiesAQI(_ res: [AQIModel]) {
+    private func prepareCitiesAQI(_ res: [AQIEntity]) {
         for model in res {
             guard let record = AQICityRecord.store(aqiRecord: model.aqi) else {continue}
             CityModel.store(city: model.city, record: record)
