@@ -18,7 +18,7 @@ protocol AQIPresenter {
     var interactor: CitiesListInteractor? {get set}
     var router: CitiesListRouter? {get set}
     
-    func interactorDidfetchedData(with result: Result<Any, Error> )
+    func interactorDidfetchedData(with result: Result<[CityModel]?, Error> )
 }
 
 class CitiesListPresenter: AQIPresenter {
@@ -29,12 +29,13 @@ class CitiesListPresenter: AQIPresenter {
     var router: CitiesListRouter?
     var view: CitiesAQIController?
         
-    func interactorDidfetchedData(with result: Result<Any, Error>) {
+    func interactorDidfetchedData(with result: Result<[CityModel]?, Error>) {
         
         switch result {
         case .success(let models):
+            guard let data = models else { return }
             DispatchQueue.main.async {
-                self.view?.update(data: models)
+                self.view?.update(data: data)
             }
             break
         case .failure(let error):

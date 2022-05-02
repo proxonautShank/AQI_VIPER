@@ -13,10 +13,9 @@
 
 import UIKit
 
-
 protocol AQIViewProtocol {
     var presenter: CitiesListPresenter? { get set }
-    func update(data: Any)
+    func update(data: [CityModel])
     func showErrorMsg(error: Error)
 }
 
@@ -118,9 +117,8 @@ extension CitiesAQIController  {
 
 extension CitiesAQIController: AQIViewProtocol {
     
-    func update(data: Any) {
-        guard let model = data as? [CityModel] else { return }
-        citiesModel = model
+    func update(data: [CityModel]) {
+        citiesModel = data
         reloadTable()
     }
     
