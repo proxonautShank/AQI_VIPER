@@ -23,7 +23,7 @@ class DetailCityIneractor: AQIDetailsInteractor {
     var presenter: DetailCityPresenter?
     
     func getAQI(city: String) {
-        let records = (CityModel.getRecords(city: city)?.allObjects as? [AQICityRecord])!
+        let records = (CityModel.getRecords(city: city, context: CoreDataStack.shared.managedContext)?.allObjects as? [AQICityRecord])!
         presenter?.interactorDidfetchedData(with: .success(records))
     }
 }

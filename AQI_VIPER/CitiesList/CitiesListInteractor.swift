@@ -35,7 +35,7 @@ class CitiesListInteractor: AQIInteractor {
     }
     
     private func fetchDataFromLocal() {
-        guard let models = CityModel.getModels() else {return}
+        guard let models = CityModel.getModels(context: CoreDataStack.shared.managedContext) else {return}
         presenter?.interactorDidfetchedData(with: .success(models))
     }
 }
@@ -55,10 +55,19 @@ extension CitiesListInteractor: WebSocketDelegate {
 extension CitiesListInteractor {
     
     private func prepareCitiesAQI(_ res: [AQIEntity]) {
+        let stack = CoreDataStack.shared
         for model in res {
-            guard let record = AQICityRecord.store(aqiRecord: model.aqi) else {continue}
-            CityModel.store(city: model.city, record: record)
+            guard let record = AQICityRecord.store(aqiRecord: model.aqi, stack: stack) else {continue}
+            CityModel.store(city: model.city, record: record, stack: stack)
         }
         fetchDataFromLocal()
     }
 }
+
+#if DEBUG
+extension CitiesListInteractor {
+    public func exposePrivateFetch() {
+        return fetchDataFromLocal()
+    }
+}
+#endif

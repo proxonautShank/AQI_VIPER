@@ -15,20 +15,20 @@ import UIKit
 
 protocol AQIRouter {
     var entry : UINavigationController? { get } // view
-    static func start() -> AQIRouter
+    static func start() -> AQIRouter?
 }
 
 class CitiesListRouter: AQIRouter {
     var entry: UINavigationController?
     
-    static func start() -> AQIRouter {
+    static func start() -> AQIRouter? {
         
         let router = CitiesListRouter()
         
         // Assign VIP
         let navCont = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "AQINavController")
         
-        guard let view = navCont.children.first as? CitiesAQIController else { return CitiesListRouter() }
+        guard let view = navCont.children.first as? CitiesAQIController else { return nil }
         
         let interactor = CitiesListInteractor.init(webSocket: WebSocket.init(connectionString: "ws://city-ws.herokuapp.com/"))
         

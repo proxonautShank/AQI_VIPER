@@ -12,7 +12,7 @@ import CoreData
 
 public class AQICityRecord: NSManagedObject {
     
-    static func store(aqiRecord: Double) -> AQICityRecord? {
+    static func store(aqiRecord: Double, stack: CoreDataStack) -> AQICityRecord? {
         
         guard let record = NSEntityDescription.insertNewObject(forEntityName: "AQICityRecord", into: CoreDataStack.shared.managedContext) as? AQICityRecord else {return nil}
         record.aqi = aqiRecord
@@ -20,7 +20,7 @@ public class AQICityRecord: NSManagedObject {
         record.time = Date()
         record.status = AQIStatus.status(forAQI: aqiRecord).rawValue
         
-        CoreDataStack.shared.saveContext()
+        stack.saveContext()
         
         return record
     }

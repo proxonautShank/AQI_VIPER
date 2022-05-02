@@ -12,11 +12,11 @@ import CoreData
 
 public class CityModel: NSManagedObject {
     
-    static func store(city name: String, record: AQICityRecord) {
+    static func store(city name: String, record: AQICityRecord, stack: CoreDataStack) {
         
-        let context = CoreDataStack.shared.managedContext
-                
-        if let cit = getModel(name: name) {
+        let context = stack.managedContext
+        
+        if let cit = getModel(name: name, context: context) {
             cit.addToRecords(record)
         }else {
             let city = NSEntityDescription.insertNewObject(forEntityName: "CityModel", into: context) as? CityModel
@@ -24,28 +24,28 @@ public class CityModel: NSManagedObject {
             city?.addToRecords(record)
         }
         
-        CoreDataStack.shared.saveContext()
+        stack.saveContext()
     }
     
-    static func getModel(name: String) -> CityModel? {
+    static func getModel(name: String, context: NSManagedObjectContext) -> CityModel? {
         let req = CityModel.fetchRequest()
         req.predicate = NSPredicate(format: "name = %@", name)
         
-        return try? CoreDataStack.shared.managedContext.fetch(req).first
+        return try? context.fetch(req).first
     }
     
-    static func getRecords(city: String) -> NSSet? {
+    static func getRecords(city: String, context: NSManagedObjectContext) -> NSSet? {
         let req = CityModel.fetchRequest()
         req.predicate = NSPredicate(format: "name = %@", city)
         
-        return try? CoreDataStack.shared.managedContext.fetch(req).first?.records
+        return try? context.fetch(req).first?.records
     }
     
-    static func getModels() -> [CityModel]? {
+    static func getModels(context: NSManagedObjectContext) -> [CityModel]? {
         let req = CityModel.fetchRequest()
         req.sortDescriptors = [NSSortDescriptor.init(key: "name", ascending: true)]
         
-        return try? CoreDataStack.shared.managedContext.fetch(req)
+        return try? context.fetch(req)
     }
     
 }

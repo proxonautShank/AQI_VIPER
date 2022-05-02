@@ -15,7 +15,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
-        let citiesRoute = CitiesListRouter.start()
+        guard let citiesRoute = CitiesListRouter.start() else { return }
         
         let initialVC = citiesRoute.entry
         let window = UIWindow(windowScene: windowScene)
